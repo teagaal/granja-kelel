@@ -94,6 +94,10 @@ nav {
   justify-content: space-around;
   width: 100%;
   padding: 80px 64px;
+
+  @media screen and (max-width: 1280px) {
+    flex-direction: column;
+  }
 }
 
 .box2,
@@ -101,12 +105,20 @@ nav {
   flex-direction: row-reverse;
   background-color: var(--secondary);
   color: var(--primary);
+
+  @media screen and (max-width: 1280px) {
+    flex-direction: column;
+  }
 }
 
 .box2,
 .box3 {
   .imagen {
     max-width: 600px;
+
+    @media screen and (max-width: 1280px) {
+      margin-bottom: 56px;
+    }
   }
 
   .texto {
@@ -117,6 +129,10 @@ nav {
 .box4 {
   .imagen {
     max-width: 500px;
+
+    @media screen and (max-width: 1280px) {
+      margin-bottom: 56px;
+    }
   }
 
   .texto {
@@ -126,11 +142,16 @@ nav {
 
 .box1 {
   padding: 144px 64px;
+
   .imagen {
     max-width: 700px;
     transform: rotate(-2deg);
     outline: 1px solid var(--highlight);
     outline-offset: 8px;
+
+    @media screen and (max-width: 1280px) {
+      margin-bottom: 56px;
+    }
   }
 
   h1 {
@@ -149,6 +170,12 @@ footer {
   align-items: center;
   padding: 112px 64px;
 
+  @media screen and (max-width: 1280px) {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 64px;
+  }
+
   h2 {
     font-size: 2rem;
     text-decoration: solid underline var(--pink) 3px;
@@ -160,8 +187,19 @@ footer {
     font-size: 1.25rem;
   }
 
+  address {
+    @media screen and (max-width: 1280px) {
+      font-size: 1.6rem;
+    }
+  }
+
   .tels {
     width: 450px;
+
+    @media screen and (max-width: 1280px) {
+      width: auto;
+      margin-top: 32px;
+    }
   }
 }
 
