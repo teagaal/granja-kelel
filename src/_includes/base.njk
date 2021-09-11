@@ -1,17 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>{{ title }}</title>
-	<link rel="stylesheet" href="{{ '/css/style.css' | url }}" />
-</head>
-<body>
-	<header>
-		<h1>{{ title }}</h1>
-	</header>
-	<main>
-	{{ content | safe }}
-	</main>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ title }}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&family=Work+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="{{ '/css/style.css' | url }}" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li>
+            <a href="#contacto">Contacto</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="box1">
+        <div class="imagen">
+          <img
+            src="../assets/gallinas0.jpg"
+            alt="gallinas coloradas libres en el campo"
+          />
+        </div>
+        <div class="texto">
+          <h1 class="accent">Granja Kel``el</h1>
+          <p>Huevos de campo 100% natural</p>
+        </div>
+      </section>
+      <section class="box2">
+        <div class="imagen">
+          <img
+            src="../assets/gallinas1.jpg"
+            alt="gallinas en un amplio galpón comiendo de los comederos"
+          />
+        </div>
+        <div class="texto">
+          <p>Somos un pequeños emprendimiento de agricultura familiar.</p>
+          <p>
+            Nuestras gallinas crecen felices, libres de jaula, en galponcitos
+            aireados e higiénicos.
+          </p>
+        </div>
+      </section>
+      <section class="box3">
+        <div class="imagen">
+          <img
+            src="../assets/gallinas2.jpg"
+            alt="gallinas tomando agua en el galpón"
+          />
+        </div>
+        <div class="texto">
+          <p>Además pastorean en patios amplios por la tarde.</p>
+          <p>El resultado es un producto fresco y sano.</p>
+        </div>
+      </section>
+      <section class="box4">
+        <div class="imagen">
+          <img src="../assets/huevos.jpg" alt="huevos en maples de 6 y de 30" />
+        </div>
+        <div class="texto">
+          <p>Envasamos en maples nuevos, de capacidad de 30 unidades.</p>
+          <p>Y también en cajas o paquetes de 6 unidades.</p>
+        </div>
+      </section>
+      {{ content | safe }}
+    </main>
+    <footer id="contacto">
+      <div>
+        <h2>Pueden visitarnos</h2>
+        <address>Callejón Artiaga 2740 - San Pedro(B)</address>
+        <p>(Dentro del paraje conocido como La Serena)</p>
+      </div>
+      <div class="tels">
+        <h2>Teléfonos</h2>
+        <p>María: 11-5320-7072</p>
+        <p>Cristian: 3329-509105</p>
+        <p>Noelia: 3329-381793</p>
+      </div>
+    </footer>
+  </body>
 </html>

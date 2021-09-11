@@ -1,4 +1,184 @@
+@import "variables.scss";
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul,
+ol {
+  list-style: none;
+  margin: 0;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
 body {
-  font-family: sans-serif;
-  background-color: #f9f9f9;
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-weight: var(--font-weight-regular);
+  font-family: var(--font-primary);
+  background-color: var(--primary);
+  color: var(--secondary);
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+a {
+  color: var(--black);
+  text-decoration-color: var(--red);
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+header {
+  padding: 4px 16px;
+  background-color: var(--secondary);
+  color: var(--primary);
+}
+
+nav {
+  text-align: end;
+}
+
+main {
+  max-width: 1530px;
+}
+
+.box1,
+.box2,
+.box3,
+.box4 {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  padding: 40px 64px;
+}
+
+.box2,
+.box4 {
+  flex-direction: row-reverse;
+  background-color: var(--secondary);
+  color: var(--primary);
+}
+
+.box2,
+.box3 {
+  .imagen {
+    max-width: 300px;
+  }
+
+  .texto {
+    max-width: 30ch;
+  }
+}
+
+.box4 {
+  .imagen {
+    max-width: 250px;
+  }
+
+  .texto {
+    max-width: 30ch;
+  }
+}
+
+.box1 {
+  padding: 72px 64px;
+  .imagen {
+    max-width: 350px;
+    transform: rotate(-2deg);
+    outline: 1px solid var(--highlight);
+    outline-offset: 8px;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+  }
+}
+
+.accent {
+  color: var(--highlight);
+}
+
+footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 56px 64px;
+
+  h2 {
+    font-size: 1rem;
+    text-decoration: solid underline var(--pink) 3px;
+    margin-bottom: 8px;
+  }
+
+  p {
+    max-width: 30ch;
+    font-size: 0.75rem;
+  }
+
+  .tels {
+    width: 250px;
+  }
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
