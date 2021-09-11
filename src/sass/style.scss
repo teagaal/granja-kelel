@@ -40,6 +40,7 @@ body {
   line-height: 1.5;
   font-weight: var(--font-weight-regular);
   font-family: var(--font-primary);
+  font-size: 32px;
   background-color: var(--primary);
   color: var(--secondary);
 }
@@ -84,10 +85,6 @@ nav {
   text-align: end;
 }
 
-main {
-  max-width: 1530px;
-}
-
 .box1,
 .box2,
 .box3,
@@ -96,7 +93,7 @@ main {
   align-items: center;
   justify-content: space-around;
   width: 100%;
-  padding: 40px 64px;
+  padding: 80px 64px;
 }
 
 .box2,
@@ -109,7 +106,7 @@ main {
 .box2,
 .box3 {
   .imagen {
-    max-width: 300px;
+    max-width: 600px;
   }
 
   .texto {
@@ -119,7 +116,7 @@ main {
 
 .box4 {
   .imagen {
-    max-width: 250px;
+    max-width: 500px;
   }
 
   .texto {
@@ -128,16 +125,16 @@ main {
 }
 
 .box1 {
-  padding: 72px 64px;
+  padding: 144px 64px;
   .imagen {
-    max-width: 350px;
+    max-width: 700px;
     transform: rotate(-2deg);
     outline: 1px solid var(--highlight);
     outline-offset: 8px;
   }
 
   h1 {
-    font-size: 2.5rem;
+    font-size: 5rem;
     font-weight: 700;
   }
 }
@@ -150,21 +147,21 @@ footer {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 56px 64px;
+  padding: 112px 64px;
 
   h2 {
-    font-size: 1rem;
+    font-size: 2rem;
     text-decoration: solid underline var(--pink) 3px;
     margin-bottom: 8px;
   }
 
   p {
     max-width: 30ch;
-    font-size: 0.75rem;
+    font-size: 1.25rem;
   }
 
   .tels {
-    width: 250px;
+    width: 450px;
   }
 }
 
